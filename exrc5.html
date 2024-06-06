@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Tableau 10x10 avec numéros de ligne et de colonne</h2>
+    <table id="tableau">
+    </table>
+
+    <script>
+ 
+    
+
+        f
+    </script>
+</body>
+</html>
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+
+    <div class="container mx-auto p-8">
+        <div id="tableau" ></div>
+    </div>
+
+    <script>
+        function tableau() {
+            var tableau = "<table class='table-auto border-collapse border border-black'>";
+            
+            for (var i = 1; i <= 10; i++) {
+                tableau += "<tr>";
+                for (var k = 1; k <= 10; k++) {
+                    tableau += "<td class='border border-black px-2 py-2'> L" + i + ", C " + k + "</td>";
+                }
+                tableau += "</tr>";
+            }
+
+            tableau += "</table>";
+            document.getElementById("tableau").innerHTML = tableau;
+        }
+
+        window.onload = function() {
+            tableau();
+        };
+    </script>
+
+</body>
+</html>

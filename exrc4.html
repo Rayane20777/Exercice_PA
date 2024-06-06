@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <form id="ageForm">
+        <label for="age">Entrez votre âge:</label>
+        <input type="text" id="age" name="age">
+        <input type="submit" value="Obtenir le commentaire">
+    </form>
+    <p id="comment"></p>
+
+    <script>
+        document.getElementById('ageForm').onsubmit = function(event) {
+            event.preventDefault();
+            let age = document.getElementById('age').value;
+            let comment = document.getElementById('comment');
+            if (age >= 1 && age <= 17) {
+                comment.textContent = "Vous n'êtes pas encore majeur.";
+            } else if (age >= 18 && age <= 49) {
+                comment.textContent = "Vous êtes majeur mais pas encore senior.";
+            } else if (age >= 50 && age <= 59) {
+                comment.textContent = "Vous êtes senior mais pas encore retraité.";
+            } else if (age >= 60 && age <= 120) {
+                comment.textContent = "Vous êtes retraité, profitez de votre temps libre !";
+            } else {
+                comment.textContent = "Âge non valide.";
+            }
+        }
+    </script>
+</body>
+</html>

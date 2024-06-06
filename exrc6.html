@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>conversion dh en euro</h2>
+    <form id="conversionForm">
+        <label for="dh">Montant en Dhs :</label>
+        <input type="number" id="dh" step="0.01" required>
+        <button type="button" onclick="euro()">Convertir en Euro</button>
+        <br><br>
+        <label for="euro">Montant en Euro :</label>
+        <input type="number" id="euro" step="0.01" required>
+        <button type="button" onclick="dh()">Convertir en Dhs</button>
+    </form>
+
+    <script>
+        function euro() {
+            var dhsAmount = parseFloat(document.getElementById("dh").value);
+            var euroAmount = dhsAmount / 10.18;
+            document.getElementById("euro").value = euroAmount.toFixed(2);
+        }
+
+        function dh() {
+            var euroAmount = parseFloat(document.getElementById("euro").value);
+            var dhsAmount = euroAmount * 10.18;
+            document.getElementById("dh").value = dhsAmount.toFixed(2);
+        }
+
+
+        
+    </script>
+</body>
+</html>
+

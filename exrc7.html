@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address Book</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mx-auto p-8">
+        <h1 class=" font-bold mb-4">adresses</h1>
+        <div class="">
+            <textarea id="adresse" ></textarea>
+            <label class="block">
+                <input type="checkbox"  onclick="address(this, 'jmartin@protonon.fr')"> 
+               jmartin@protonon.fr
+            </label>
+            <label class="block">
+                <input type="checkbox"  onclick="address(this, 'b.dupont@hotmail.com')"> 
+                b.dupont@hotmail.com
+            </label>
+            <label class="block">
+                <input type="checkbox"  onclick="address(this, 'example10293@gmail.com')"> 
+                example10293@gmail.com
+            </label>
+            <label class="block">
+                <input type="checkbox"  onclick="address(this, 'jp@mail.com')"> 
+                jp@mail.com
+            </label>
+            <label class="block">
+                <input type="checkbox"  onclick="address(this, 'karsher@altern.org')"> 
+                karsher@altern.org
+            </label>
+        </div>
+    </div>
+</body>
+    <script>
+        function address(checkbox, adresse) {
+            var textarea = document.getElementById("adresse");
+            if (checkbox.checked) {
+                textarea.value = adresse;
+             
+            } else {
+                textarea.value = "";
+            }
+        }
+    </script>
+
+</html>

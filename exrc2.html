@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <form id="valueForm">
+        <label for="value">Entrez une valeur:</label>
+        <input type="text" id="value" name="value">
+        <input type="submit" value="Vérifier">
+    </form>
+    <p id="result"></p>
+
+    <script>
+        document.getElementById('valueForm').onsubmit = function(event) {
+            event.preventDefault();
+            let valeur = document.getElementById('value').value;
+            let result = document.getElementById('result');
+            if (valeur < 10) {
+                result.textContent = "< 10";
+            } else {
+                result.textContent = "> 10";
+            }
+        }
+    </script>
+</body>
+</html>
